@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="form.css" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <h1 class="company-title">Bitrupt</h1>
+    <div class="container" id="container">
+      <div class="form-container sign-up-container">
+        <form onsubmit="event.preventDefault(); return validation();">
+          <h1>Create Account</h1>
+
+          <input
+            type="text"
+            id="signup-name"
+            placeholder="Full Name"
+            required
+          />
+          <input
+            type="number"
+            id="signup-contact"
+            placeholder="Contact"
+            required
+          />
+          <input
+            type="text"
+            id="signup-address"
+            placeholder="Address"
+            required
+          />
+          <input type="email" id="signup-email" placeholder="Email" required />
+          <input
+            type="password"
+            id="signup-password"
+            placeholder="Password"
+            required
+          />
+          <input
+            type="password"
+            id="signup-confirm-password"
+            placeholder="Confirm Password"
+            required
+          />
+
+          <button onclick="signUp()">Sign Up</button>
+        </form>
+      </div>
+
+      <div class="form-container sign-in-container">
+        <form action="#" onsubmit="event.preventDefault()">
+          <h1>Sign in</h1>
+
+          <input type="email" id="signin-email" placeholder="Email" />
+          <input type="password" id="signin-password" placeholder="Password" />
+          <button onclick="signIn()">Sign In</button>
+        </form>
+      </div>
+
+      <div class="overlay-container">
+        <div class="overlay">
+          <div class="overlay-panel overlay-left">
+            <h1>Welcome Back!</h1>
+            <p>
+              To keep connected with us please login with your personal info
+            </p>
+            <button class="ghost" id="signin-switch">Sign In</button>
+          </div>
+
+          <div class="overlay-panel overlay-right">
+            <h1>Hello, Friend!</h1>
+            <p>Enter your personal details and start journey with us</p>
+            <button class="ghost" id="signup-switch">Sign Up</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-database.js"></script>
+
+    <script src="form.js"></script>
+  </body>
+</html>
